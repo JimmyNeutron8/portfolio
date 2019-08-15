@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>Sam Capehart - Web Developer</title>
+  <title>Tag Index</title>
 
   <meta name="author" content="Sam" />
 
-  
-  <meta name="description" content="Web developer and tech enthusiast">
   
 
   <link rel="alternate" type="application/rss+xml" title="Sam Capehart - Web Developer" href="http://localhost:4000/feed.xml" />
@@ -70,19 +68,19 @@
   
 
   
-  <meta property="og:title" content="Sam Capehart" />
+  <meta property="og:title" content="Tag Index" />
   
 
    
-  <meta property="og:description" content="Web developer and tech enthusiast">
+  <meta property="og:description" content="{%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag in tags_list -%} &amp;nbsp;{{- tag -}}&amp;nbsp;({{site.tags[tag].size}}) {%- endfor -%} {%- for...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/" />
-  <link rel="canonical" href="http://localhost:4000/" />
+  <meta property="og:url" content="http://localhost:4000/tags/" />
+  <link rel="canonical" href="http://localhost:4000/tags/" />
   
 
   
@@ -96,11 +94,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="Sam Capehart" />
+  <meta name="twitter:title" content="Tag Index" />
   
 
   
-  <meta name="twitter:description" content="Web developer and tech enthusiast">
+  <meta name="twitter:description" content="{%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag in tags_list -%} &amp;nbsp;{{- tag -}}&amp;nbsp;({{site.tags[tag].size}}) {%- endfor -%} {%- for...">
   
 
   
@@ -161,12 +159,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-heading">
-          <h1>Sam Capehart</h1>
-		  
-		    
-            <hr class="small">
-            <span class="page-subheading">Web developer and tech enthusiast</span>
-			
+          <h1>Tag Index</h1>
 		  
 		  
 		  
@@ -184,45 +177,7 @@
 <div class="container" role="main">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="posts-list">
-  
-  <article class="post-preview">
-    <a href="/2019-06-04-first-post/">
-	  <h2 class="post-title">Hello World</h2>
-
-	  
-    </a>
-
-    <p class="post-meta">
-      Posted on June 4, 2019
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-image">
-        <a href="/2019-06-04-first-post/">
-          <img src="/img/hello_world.jpg">
-        </a>
-      </div>
-      
-      <div class="post-entry">
-        Hey everyone.
-
-
-        
-        
-          <a href="/2019-06-04-first-post/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-
-   </article>
-  
-</div>
-
-
+      <div id="full-tags-list"></div>
 
 	    
     </div>
