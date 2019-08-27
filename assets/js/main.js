@@ -13,6 +13,17 @@ menuToggle.addEventListener('click', () => {
   }else{
     menu.style.display = 'flex';
   }
-
-  console.log('YO');
 });
+
+// Media query detection
+function widthChange (mq) {
+  if (mq.matches) {
+    menu.style.display = 'flex';
+  }else{
+    menu.style.display = 'none';
+  }
+}
+
+const mq = window.matchMedia('(min-width: 576px)');
+mq.addListener(widthChange);
+widthChange(mq);
